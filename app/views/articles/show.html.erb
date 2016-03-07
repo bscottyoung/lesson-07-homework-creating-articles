@@ -1,0 +1,33 @@
+<h2>Article Details</h2>
+
+<div>
+	Title:</td>
+	<%=@article.title%></td>
+</div>
+<br>
+<div>
+	Author:
+	<%="#{@article.author_last_name}, #{@article.author_first_name}"%>
+<div>
+<br>	
+<div>
+	Article Year: 
+	<%=@article.article_year %>	
+</div>
+<br>
+<div>
+	Publication:
+	<%=@article.pub_name %>	
+</div>	
+<br>
+<div>
+	Description
+	<%=@article.body.tr('[]/\",','') %>
+</div>
+<br>
+<div>
+<%=link_to 'Edit', edit_article_path(@article)   %>
+<%=link_to 'Home', articles_path   %>
+</div>
+
+

@@ -1,0 +1,44 @@
+<h3>Edit Article:</h3>
+<%= form_for @article do |a| %>
+	<div>
+		<%= a.label :title %><br>
+		<%= a.text_field :title %>
+	</div>
+	<br>
+	<div>
+		<%= a.label :author_first_name, 'Author First Name' %><br>
+		<%= a.text_field :author_first_name %>
+	</div>
+	<br>
+	<div>
+		<%= a.label :author_last_name, 'Author Last Name' %><br>
+		<%= a.text_field :author_last_name %>
+	</div>
+	<br>
+	<div>
+		<%= a.label :pub_name, 'Publication Name' %><br>
+		<%= a.text_field :pub_name %>
+	</div>
+	<br>	
+	<div>
+		<%= a.label :article_year, 'Article Year' %><br>
+		<%= a.number_field :article_year %>
+	</div>
+	<br>	
+
+	<div>
+		<%= a.label :article_pg, 'Page Number' %><br>
+		<%= a.number_field :article_pg %>
+	</div>
+	<br>
+	<div>
+		<%= a.label :body, 'Article Description' %><br>
+		<%= a.text_area :body, size:"60x12" %>		
+	</div>
+
+
+	<div>
+		<%= a.submit "Save Changes" %>
+		<%= link_to "Exit without saving", articles_path %>
+	</div>										
+<% end %>
